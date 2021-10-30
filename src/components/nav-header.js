@@ -1,4 +1,3 @@
-import logo from '../assets/images/logo.png'
 import {useEffect} from "react";
 
 export default function NavHeader() {
@@ -7,7 +6,6 @@ export default function NavHeader() {
         var header = document.getElementById("header");
         var navcontent = document.getElementById("nav-content");
         var navaction = document.getElementById("navAction");
-        var brandname = document.getElementById("brandname");
         var toToggle = document.querySelectorAll(".toggleColour");
 
         const listener = function () {
@@ -35,7 +33,7 @@ export default function NavHeader() {
                 navaction.classList.remove("text-white");
                 navaction.classList.add("text-gray-800");
                 //Use to switch toggleColour colours
-                for (var i = 0; i < toToggle.length; i++) {
+                for (let i = 0; i < toToggle.length; i++) {
                     toToggle[i].classList.add("text-white");
                     toToggle[i].classList.remove("text-gray-800");
                 }
@@ -57,8 +55,8 @@ export default function NavHeader() {
         <nav id="header" className="fixed w-full z-30 top-0 text-white">
             <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
                 <div className="pl-4 flex items-center">
-                    <a className="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
-                       href="#">
+                    <span className="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
+                       >
                         {/*!--Icon from: http://www.potlabicons.com/ -->*/}
                         {/*<svg className="h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg"*/}
                         {/*     viewBox="0 0 512.005 512.005">*/}
@@ -71,7 +69,7 @@ export default function NavHeader() {
                         {/*</svg>*/}
                         {/*<img src={logo} className={'h-8 bg-white fill-current inline'} />*/}
                         GPE PESQUISA
-                    </a>
+                    </span>
                 </div>
                 <div className="block lg:hidden pr-4">
                     <button id="nav-toggle"
@@ -87,15 +85,15 @@ export default function NavHeader() {
                     id="nav-content">
                     <ul className="list-reset lg:flex justify-end flex-1 items-center">
                         <li className="mr-3">
-                            <a className="inline-block py-2 px-4 text-black font-bold no-underline" href="#">Active</a>
+                            <span className="inline-block py-2 px-4 text-black font-bold no-underline">Active</span>
                         </li>
                         <li className="mr-3">
-                            <a className="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-                               href="#">link</a>
+                            <span className="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                               >link</span>
                         </li>
                         <li className="mr-3">
-                            <a className="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-                               href="#">link</a>
+                            <span className="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                               >link</span>
                         </li>
                     </ul>
                     <button

@@ -5,8 +5,8 @@ export default function Footer() {
             <div className="container mx-auto px-8">
                 <div className="w-full flex flex-col md:flex-row py-6">
                     <div className="flex-1 mb-6 text-black">
-                        <a className="text-black-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
-                           href="#">
+                        <span className="text-black-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
+                           >
                             {/*!--Icon from: http://www.potlabicons.com/ -->*/}
                             {/*<svg className="h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg"*/}
                             {/*     viewBox="0 0 512.005 512.005">*/}
@@ -18,22 +18,22 @@ export default function Footer() {
                             {/*    />*/}
                             {/*</svg>*/}
                             GPE PESQUISA
-                        </a>
+                        </span>
                     </div>
                     <div className="flex-1">
                         <p className="uppercase text-gray-500 md:mb-6">Links</p>
                         <ul className="list-reset mb-6">
                             <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                                <a href="#"
-                                   className="no-underline hover:underline text-gray-800 hover:text-pink-500">FAQ</a>
+                                <Link
+                                   className="no-underline hover:underline text-gray-800 hover:text-pink-500">FAQ</Link>
                             </li>
                             <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                                <a href="#"
-                                   className="no-underline hover:underline text-gray-800 hover:text-pink-500">Help</a>
+                                <Link
+                                   className="no-underline hover:underline text-gray-800 hover:text-pink-500">Help</Link>
                             </li>
                             <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                                <a href="#"
-                                   className="no-underline hover:underline text-gray-800 hover:text-pink-500">Support</a>
+                                <Link
+                                   className="no-underline hover:underline text-gray-800 hover:text-pink-500">Support</Link>
                             </li>
                         </ul>
                     </div>
@@ -41,12 +41,12 @@ export default function Footer() {
                         <p className="uppercase text-gray-500 md:mb-6">Legal</p>
                         <ul className="list-reset mb-6">
                             <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                                <a href="#"
-                                   className="no-underline hover:underline text-gray-800 hover:text-pink-500">Terms</a>
+                                <Link
+                                   className="no-underline hover:underline text-gray-800 hover:text-pink-500">Terms</Link>
                             </li>
                             <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                                <a href="#"
-                                   className="no-underline hover:underline text-gray-800 hover:text-pink-500">Privacy</a>
+                                <Link
+                                   className="no-underline hover:underline text-gray-800 hover:text-pink-500">Privacy</Link>
                             </li>
                         </ul>
                     </div>
@@ -54,16 +54,13 @@ export default function Footer() {
                         <p className="uppercase text-gray-500 md:mb-6">Social</p>
                         <ul className="list-reset mb-6">
                             <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                                <a href="#"
-                                   className="no-underline hover:underline text-gray-800 hover:text-pink-500">Facebook</a>
+                                <Link>Facebook</Link>
                             </li>
                             <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                                <a href="#"
-                                   className="no-underline hover:underline text-gray-800 hover:text-pink-500">Linkedin</a>
+                                <Link>Linkedin</Link>
                             </li>
                             <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                                <a href="#"
-                                   className="no-underline hover:underline text-gray-800 hover:text-pink-500">Twitter</a>
+                                <Link>Twitter</Link>
                             </li>
                         </ul>
                     </div>
@@ -71,21 +68,25 @@ export default function Footer() {
                         <p className="uppercase text-gray-500 md:mb-6">Company</p>
                         <ul className="list-reset mb-6">
                             <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                                <a href="#" className="no-underline hover:underline text-gray-800 hover:text-pink-500">Official
-                                    Blog</a>
+                                <Link>Official
+                                    Blog</Link>
                             </li>
                             <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                                <a href="#" className="no-underline hover:underline text-gray-800 hover:text-pink-500">About
-                                    Us</a>
+                                <Link>About Us</Link>
                             </li>
                             <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                                <a href="#"
-                                   className="no-underline hover:underline text-gray-800 hover:text-pink-500">Contact</a>
+                                <Link>Contato</Link>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
         </footer>
+    )
+}
+
+function Link({children}) {
+    return (
+        <span className="no-underline hover:underline text-gray-800 hover:text-blue-900 cursor-pointer">{children}</span>
     )
 }

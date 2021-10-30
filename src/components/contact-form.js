@@ -15,20 +15,16 @@ export default function ContactForm() {
             <div className="lg:w-6/12 xs:w-10/12 m-auto bg-white bg-opacity-10 rounded-2xl p-6">
                 <div>
                     <Label>Nome completo</Label>
-                    <input
-                        className="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                        type="text" placeholder="" />
+                    <Input />
                 </div>
                 <div className="mt-8">
                     <Label>Email</Label>
-                    <input
-                        className="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                        type="text" />
+                    <Input />
                 </div>
                 <div className="mt-8">
                     <Label>Mensagem</Label>
                     <textarea
-                        className="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
+                        className="w-full h-32 bg-gray-50 text-gray-700 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
                 </div>
                 <div className="mt-8">
                     <Button className={"uppercase"}>
@@ -44,5 +40,13 @@ export default function ContactForm() {
 function Label({children}) {
     return (
         <span className="uppercase text-sm font-bold">{children}</span>
+    )
+}
+
+function Input() {
+    return (
+        <input
+            className="w-full bg-gray-50 text-gray-700 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+            type="text" />
     )
 }
