@@ -235,7 +235,7 @@ export default function Home() {
                 </div>
             </div>
         </section>
-        <section className="bg-gray-100 py-8">
+        <section className="bg-gray-100 py-8" id={"preco"}>
             <div className="container mx-auto px-2 pt-4 pb-12 text-gray-800">
                 <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
                     Preço
@@ -244,39 +244,14 @@ export default function Home() {
                     <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
                 </div>
                 <div className="flex flex-col sm:flex-row justify-center pt-12 my-12 sm:my-4">
-                    {/*<div*/}
-                    {/*    className="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4">*/}
-                    {/*    <div className="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">*/}
-                    {/*        <div className="p-8 text-3xl font-bold text-center border-b-4">*/}
-                    {/*            Free*/}
-                    {/*        </div>*/}
-                    {/*        <ul className="w-full text-center text-sm">*/}
-                    {/*            <li className="border-b py-4">Thing</li>*/}
-                    {/*            <li className="border-b py-4">Thing</li>*/}
-                    {/*            <li className="border-b py-4">Thing</li>*/}
-                    {/*        </ul>*/}
-                    {/*    </div>*/}
-                    {/*    <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">*/}
-                    {/*        <div className="w-full pt-6 text-3xl text-gray-600 font-bold text-center">*/}
-                    {/*            £0*/}
-                    {/*            <span className="text-base">for one user</span>*/}
-                    {/*        </div>*/}
-                    {/*        <div className="flex items-center justify-center">*/}
-                    {/*            <button*/}
-                    {/*                className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">*/}
-                    {/*                Sign Up*/}
-                    {/*            </button>*/}
-                    {/*        </div>*/}
-                    {/*    </div>*/}
-                    {/*</div>*/}
                     <div
                         className="flex flex-col w-5/6 lg:w-1/3 mx-auto lg:mx-0 rounded-lg bg-white mt-4 sm:-mt-6 shadow-lg z-10">
                         <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-                            <div className="w-full p-8 text-3xl font-bold text-center">Basic</div>
+                            <div className="w-full p-8 text-3xl font-bold text-center">Plano Básico</div>
                             <div className="h-1 w-full gradient my-0 py-0 rounded-t"></div>
                             <ul className="w-full text-center text-base font-bold">
-                                <li className="border-b py-4">Thing</li>
-                                <li className="border-b py-4">Thing</li>
+                                <li className="border-b py-4">Acesso a todas as funcionalidades</li>
+                                <li className="border-b py-4">Preço flexível</li>
                                 <li className="border-b py-4">Thing</li>
                                 <li className="border-b py-4">Thing</li>
                             </ul>
@@ -284,48 +259,23 @@ export default function Home() {
                         <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
                             <div className="w-full pt-6 text-4xl font-bold text-center">
                                 R$ 99,00
-                                <span className="text-base"> / mês</span>
+                                <span className="text-base text-gray-500"> / mês</span>
                             </div>
-                            <div className="w-full text-blue-700 text-4xl font-bold text-center">
+                            <div className="w-full text-blue-800 text-4xl font-bold text-center">
                                 +
                             </div>
                             <div className="w-full text-4xl font-bold text-center">
                                 R$ 0,144
-                                <span className="text-base"> / por entrevista</span>
+                                <span className="text-base text-gray-500"> / por entrevista</span>
                             </div>
                             <div className="flex items-center justify-center">
                                 <button
                                     className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                                    Sign Up
+                                    Assinar plano
                                 </button>
                             </div>
                         </div>
                     </div>
-                    {/*<div*/}
-                    {/*    className="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4">*/}
-                    {/*    <div className="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">*/}
-                    {/*        <div className="p-8 text-3xl font-bold text-center border-b-4">*/}
-                    {/*            Pro*/}
-                    {/*        </div>*/}
-                    {/*        <ul className="w-full text-center text-sm">*/}
-                    {/*            <li className="border-b py-4">Thing</li>*/}
-                    {/*            <li className="border-b py-4">Thing</li>*/}
-                    {/*            <li className="border-b py-4">Thing</li>*/}
-                    {/*        </ul>*/}
-                    {/*    </div>*/}
-                    {/*    <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">*/}
-                    {/*        <div className="w-full pt-6 text-3xl text-gray-600 font-bold text-center">*/}
-                    {/*            £x.99*/}
-                    {/*            <span className="text-base">/ per user</span>*/}
-                    {/*        </div>*/}
-                    {/*        <div className="flex items-center justify-center">*/}
-                    {/*            <button*/}
-                    {/*                className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">*/}
-                    {/*                Sign Up*/}
-                    {/*            </button>*/}
-                    {/*        </div>*/}
-                    {/*    </div>*/}
-                    {/*</div>*/}
                 </div>
             </div>
         </section>
@@ -334,7 +284,7 @@ export default function Home() {
         >
             <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                 <g transform="translate(-1.000000, -14.000000)" fillRule="nonzero">
-                    <g className="wave" fill="#f8fafc">
+                    <g className="wave" fill="#f3f4f6">
                         <path
                             d="M1440,84 C1383.555,64.3 1342.555,51.3 1317,45 C1259.5,30.824 1206.707,25.526 1169,22 C1129.711,18.326 1044.426,18.475 980,22 C954.25,23.409 922.25,26.742 884,32 C845.122,37.787 818.455,42.121 804,45 C776.833,50.41 728.136,61.77 713,65 C660.023,76.309 621.544,87.729 584,94 C517.525,105.104 484.525,106.438 429,108 C379.49,106.484 342.823,104.484 319,102 C278.571,97.783 231.737,88.736 205,84 C154.629,75.076 86.296,57.743 0,32 L0,0 L1440,0 L1440,84 Z"
                         ></path>

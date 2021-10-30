@@ -2,7 +2,7 @@ import Button from "./button";
 
 export default function ContactForm() {
     return (
-        <section className="container mx-auto text-center py-6 mb-12">
+        <section className="container mx-auto text-center py-6 mb-12" id={"contato"}>
             <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
                 O que você está esperando para fazer pesquisa fácil assim?
             </h1>

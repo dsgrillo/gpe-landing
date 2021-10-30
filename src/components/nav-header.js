@@ -46,8 +46,46 @@ export default function NavHeader() {
 
         document.addEventListener("scroll", listener);
 
+        var navMenuDiv = document.getElementById("nav-content");
+        var navMenu = document.getElementById("nav-toggle");
+
+        document.onclick = check;
+
+        function check(e) {
+            var target = (e && e.target);
+            console.log('checking..', target)
+
+            //Nav Menu
+            if (!checkParent(target, navMenuDiv)) {
+                console.log('menu div')
+                // click NOT on the menu
+                if (checkParent(target, navMenu)) {
+                    console.log('not on the menu')
+                    // click on the link
+                    if (navMenuDiv.classList.contains("hidden")) {
+                        navMenuDiv.classList.remove("hidden");
+                    } else {
+                        navMenuDiv.classList.add("hidden");
+                    }
+                } else {
+                    // click both outside link and outside menu, hide menu
+                    navMenuDiv.classList.add("hidden");
+                }
+            }
+        }
+        function checkParent(t, elm) {
+            while (t.parentNode) {
+                if (t === elm) {
+                    return true;
+                }
+                t = t.parentNode;
+            }
+            return false;
+        }
+
         return () => {
             document.removeEventListener("scroll", listener)
+            document.removeEventListener("click", check)
         }
     }, [])
 
@@ -72,7 +110,9 @@ export default function NavHeader() {
                     </span>
                 </div>
                 <div className="block lg:hidden pr-4">
-                    <button id="nav-toggle"
+                    <button onClick={() => {
+
+                    }}
                             className="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                         <svg className="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <title>Menu</title>
@@ -85,23 +125,26 @@ export default function NavHeader() {
                     id="nav-content">
                     <ul className="list-reset lg:flex justify-end flex-1 items-center">
                         <li className="mr-3">
-                            <span className="inline-block py-2 px-4 text-black font-bold no-underline">Active</span>
+                            <a href={"#como-funciona"} className="inline-block py-2 px-4 text-black font-bold no-underline">
+                                Como funciona?
+                            </a>
                         </li>
                         <li className="mr-3">
-                            <span className="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-                               >link</span>
+                            <a href={"#funcionalidades"} className="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                               >Funcionalidades</a>
                         </li>
                         <li className="mr-3">
-                            <span className="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-                               >link</span>
+                            <a href={"#preco"} className="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                               >Preço</a>
                         </li>
                     </ul>
-                    <button
+                    <a
                         id="navAction"
                         className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+                        href={"#contato"}
                     >
-                        Action
-                    </button>
+                        Registrar-se
+                    </a>
                 </div>
             </div>
             <hr className="border-b border-gray-100 opacity-25 my-0 py-0"/>
