@@ -1,4 +1,6 @@
 import Button from "./button";
+import Image from "next/image";
+import hero from '../../public/hero.png'
 
 export default function Hero() {
     return (
@@ -19,7 +21,7 @@ export default function Hero() {
                 </div>
                 {/*!--Right Col-->*/}
                 <div className="w-full md:w-3/5 py-6 text-center">
-                    <img alt={"Hero"} className="w-full md:w-4/5 z-50" src="hero.png"/>
+                    <Image alt={"Hero"} className="w-full md:w-4/5 z-50" src={hero} />
                 </div>
             </div>
         </div>

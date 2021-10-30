@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .gradient {
+        background: linear-gradient(90deg, rgba(0, 52, 89, 1) 0%, rgba(0, 138, 194, 1) 100%);
+    }
+}
+
+body {
+    @apply leading-normal tracking-normal text-white gradient
+}

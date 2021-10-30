@@ -75,7 +75,8 @@ export default function NavHeader() {
         }
         function checkParent(t, elm) {
             while (t.parentNode) {
-                if (t === elm) {
+                if (t == elm) {
+                    console.log('found element', {t, elm})
                     return true;
                 }
                 t = t.parentNode;
@@ -110,10 +111,8 @@ export default function NavHeader() {
                     </span>
                 </div>
                 <div className="block lg:hidden pr-4">
-                    <button onClick={() => {
-
-                    }}
-                            className="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                    <button
+                            className="flex items-center p-1 text-blue-900 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                         <svg className="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <title>Menu</title>
                             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
