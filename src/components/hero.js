@@ -1,6 +1,8 @@
 import Button from "./button";
 import Image from "next/image";
 import hero from "../../public/hero.png";
+import Link from "next/link";
+import Waves from "./waves";
 
 export default function Hero() {
   return (
@@ -15,15 +17,17 @@ export default function Hero() {
           <p className="leading-normal text-2xl mb-8">
             Conheça o novo jeito de fazer pesquisa.
           </p>
-          <Button onClick={() => console.log("comece agora")}>
-            Comece agora o seu trial!
-          </Button>
+          <Link href={"/#contato"}>
+            <Button>Comece agora o seu trial!</Button>
+          </Link>
         </div>
         {/*!--Right Col-->*/}
         <div className="w-full md:w-3/5 py-6 text-center">
           <Image alt={"Hero"} className="w-full md:w-4/5 z-50 z-0" src={hero} />
         </div>
       </div>
+
+      <Waves />
     </div>
   );
 }

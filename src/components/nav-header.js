@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import Link from "next/link";
-
+import logo from "../../public/logo.svg";
 export default function NavHeader() {
   useEffect(() => {
     let scrollpos = window.scrollY;
@@ -91,20 +91,71 @@ export default function NavHeader() {
     <nav id="header" className="fixed w-full z-30 top-0 text-white">
       <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
         <div className="pl-4 flex items-center">
-          <span className="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl">
-            {/*!--Icon from: http://www.potlabicons.com/ -->*/}
-            {/*<svg className="h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg"*/}
-            {/*     viewBox="0 0 512.005 512.005">*/}
-            {/*    <rect fill="#2a2a31" x="16.539" y="425.626" width="479.767" height="50.502"*/}
-            {/*          transform="matrix(1,0,0,1,0,0)"/>*/}
-            {/*    <path*/}
-            {/*        className="plane-take-off"*/}
-            {/*        d=" M 510.7 189.151 C 505.271 168.95 484.565 156.956 464.365 162.385 L 330.156 198.367 L 155.924 35.878 L 107.19 49.008 L 211.729 230.183 L 86.232 263.767 L 36.614 224.754 L 0 234.603 L 45.957 314.27 L 65.274 347.727 L 105.802 336.869 L 240.011 300.886 L 349.726 271.469 L 483.935 235.486 C 504.134 230.057 516.129 209.352 510.7 189.151 Z "*/}
-            {/*    />*/}
-            {/*</svg>*/}
-            {/*<img src={logo} className={'h-8 bg-white fill-current inline'} />*/}
-            GPE PESQUISA
-          </span>
+          <Link href={"/"}>
+            <a className="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl">
+              {/*<span className="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl">*/}
+              {/*  /!*!--Icon from: http://www.potlabicons.com/ -->*!/*/}
+              {/*  <svg*/}
+              {/*    className="h-8 fill-current inline mr-3"*/}
+              {/*    xmlns="http://www.w3.org/2000/svg"*/}
+              {/*    viewBox="0 0 512.005 512.005"*/}
+              {/*  >*/}
+              {/*    <rect*/}
+              {/*      fill="#2a2a31"*/}
+              {/*      x="16.539"*/}
+              {/*      y="425.626"*/}
+              {/*      width="479.767"*/}
+              {/*      height="50.502"*/}
+              {/*      transform="matrix(1,0,0,1,0,0)"*/}
+              {/*    />*/}
+              {/*    <path*/}
+              {/*      className="plane-take-off"*/}
+              {/*      d=" M 510.7 189.151 C 505.271 168.95 484.565 156.956 464.365 162.385 L 330.156 198.367 L 155.924 35.878 L 107.19 49.008 L 211.729 230.183 L 86.232 263.767 L 36.614 224.754 L 0 234.603 L 45.957 314.27 L 65.274 347.727 L 105.802 336.869 L 240.011 300.886 L 349.726 271.469 L 483.935 235.486 C 504.134 230.057 516.129 209.352 510.7 189.151 Z "*/}
+              {/*    />*/}
+              {/*  </svg>*/}
+              {/*  GPE PESQUISA*/}
+              {/*</span>*/}
+              {/*!--Icon from: http://www.potlabicons.com/ -->*/}
+              <svg
+                className="h-8 fill-current inline mr-3"
+                viewBox="0 0 328 305"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M56.7446 300.719C54.2667 295.763 71.1083 260.138 72.2187 237.813C72.2371 237.443 72.0564 237.111 71.7363 236.924C33.8503 214.811 -28.4304 150.65 21.7446 68.2192C84.7446 -35.2808 324.245 -16.7808 324.245 132.219C324.245 234.719 190.911 265.053 132.745 257.719C108.345 287.319 59.2445 305.719 56.7446 300.719Z"
+                  fill="white"
+                  stroke="black"
+                  strokeWidth="3"
+                />
+                <path
+                  d="M87.7448 268.219C92.4115 258.053 98.9448 234.919 87.7448 223.719C73.7448 209.719 19.2448 187.719 24.7448 118.719C30.2448 49.7192 129.245 6.21919 205.745 29.7192C133.745 11.2192 37.2446 60.7192 33.2446 118.719C29.2446 176.719 73.7446 205.219 92.7446 218.219C107.945 228.619 105.078 250.553 101.745 260.219L87.7448 268.219Z"
+                  fill="#003459"
+                  stroke="#003459"
+                  strokeWidth="6"
+                />
+                <path
+                  d="M160.245 202.719V64.2192C160.245 61.4578 162.484 59.2192 165.245 59.2192H187.245C190.007 59.2192 192.245 61.4578 192.245 64.2192V202.719C192.245 205.481 190.007 207.719 187.245 207.719H165.245C162.484 207.719 160.245 205.481 160.245 202.719Z"
+                  fill="#3C92CA"
+                  stroke="#3C92CA"
+                  strokeWidth="7"
+                />
+                <path
+                  d="M213.245 202.719V109.719C213.245 106.958 215.484 104.719 218.245 104.719H240.245C243.007 104.719 245.245 106.958 245.245 109.719V202.719C245.245 205.481 243.007 207.719 240.245 207.719H218.245C215.484 207.719 213.245 205.481 213.245 202.719Z"
+                  fill="#003459"
+                  stroke="#003459"
+                  strokeWidth="7"
+                />
+                <path
+                  d="M107.245 202.719V145.719C107.245 142.958 109.484 140.719 112.245 140.719H134.245C137.007 140.719 139.245 142.958 139.245 145.719V202.719C139.245 205.481 137.007 207.719 134.245 207.719H112.245C109.484 207.719 107.245 205.481 107.245 202.719Z"
+                  fill="#003459"
+                  stroke="#003459"
+                  strokeWidth="7"
+                />
+              </svg>
+              GPE PESQUISA
+            </a>
+          </Link>
         </div>
         <div className="block lg:hidden pr-4">
           <button className="flex items-center p-1 text-blue-900 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
