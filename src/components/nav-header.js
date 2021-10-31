@@ -50,7 +50,7 @@ export default function NavHeader() {
     var navMenuDiv = document.getElementById("nav-content");
     var navMenu = document.getElementById("nav-toggle");
 
-    document.onclick = check;
+    // document.onclick = check;
 
     function check(e) {
       var target = e && e.target;
@@ -91,7 +91,7 @@ export default function NavHeader() {
     <nav id="header" className="fixed w-full z-30 top-0 text-white">
       <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
         <div className="pl-4 flex items-center">
-          <Link href={"/"}>
+          <Link href={"/#"}>
             <a className="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl">
               {/*<span className="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl">*/}
               {/*  /!*!--Icon from: http://www.potlabicons.com/ -->*!/*/}
@@ -184,16 +184,16 @@ export default function NavHeader() {
                 </a>
               </Link>
             </li>
-            <li className="mr-3">
-              <Link href={"/#funcionalidades"}>
-                <a
-                  href={"#funcionalidades"}
-                  className="inline-block no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-                >
-                  Funcionalidades
-                </a>
-              </Link>
-            </li>
+            {/*<li className="mr-3">*/}
+            {/*  <Link href={"/#funcionalidades"}>*/}
+            {/*    <a*/}
+            {/*      href={"#funcionalidades"}*/}
+            {/*      className="inline-block no-underline hover:text-gray-800 hover:text-underline py-2 px-4"*/}
+            {/*    >*/}
+            {/*      Funcionalidades*/}
+            {/*    </a>*/}
+            {/*  </Link>*/}
+            {/*</li>*/}
             <li className="mr-3">
               <Link href={"/#preco"}>
                 <a

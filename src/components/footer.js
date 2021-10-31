@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="bg-white">
@@ -22,19 +24,19 @@ export default function Footer() {
             <p className="uppercase text-gray-500 md:mb-6">Links</p>
             <ul className="list-reset mb-6">
               <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                <Link className="no-underline hover:underline text-gray-800 hover:text-pink-500">
-                  FAQ
-                </Link>
+                {/*<Link className="no-underline hover:underline text-gray-800 hover:text-pink-500">*/}
+                FAQ
+                {/*</Link>*/}
               </li>
               <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                <Link className="no-underline hover:underline text-gray-800 hover:text-pink-500">
-                  Help
-                </Link>
+                {/*<Link className="no-underline hover:underline text-gray-800 hover:text-pink-500">*/}
+                Help
+                {/*</Link>*/}
               </li>
               <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                <Link className="no-underline hover:underline text-gray-800 hover:text-pink-500">
-                  Support
-                </Link>
+                {/*<Link className="no-underline hover:underline text-gray-800 hover:text-pink-500">*/}
+                Support
+                {/*</Link>*/}
               </li>
             </ul>
           </div>
@@ -42,14 +44,16 @@ export default function Footer() {
             <p className="uppercase text-gray-500 md:mb-6">Legal</p>
             <ul className="list-reset mb-6">
               <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                <Link className="no-underline hover:underline text-gray-800 hover:text-pink-500">
-                  Terms
+                <Link href={"/terms"}>
+                  <a className="no-underline hover:underline text-gray-800 hover:text-blue-600">
+                    Termos de Uso
+                  </a>
                 </Link>
               </li>
               <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                <Link className="no-underline hover:underline text-gray-800 hover:text-pink-500">
-                  Privacy
-                </Link>
+                {/*<Link className="no-underline hover:underline text-gray-800 hover:text-pink-500">*/}
+                Privacy
+                {/*</Link>*/}
               </li>
             </ul>
           </div>
@@ -57,13 +61,13 @@ export default function Footer() {
             <p className="uppercase text-gray-500 md:mb-6">Social</p>
             <ul className="list-reset mb-6">
               <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                <Link>Facebook</Link>
+                {/*<Link>Facebook</Link>*/}
               </li>
               <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                <Link>Linkedin</Link>
+                {/*<Link>Linkedin</Link>*/}
               </li>
               <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                <Link>Twitter</Link>
+                {/*<Link>Twitter</Link>*/}
               </li>
             </ul>
           </div>
@@ -71,13 +75,13 @@ export default function Footer() {
             <p className="uppercase text-gray-500 md:mb-6">Company</p>
             <ul className="list-reset mb-6">
               <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                <Link>Official Blog</Link>
+                {/*<Link>Official Blog</Link>*/}
               </li>
               <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                <Link>About Us</Link>
+                {/*<Link>About Us</Link>*/}
               </li>
               <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                <Link>Contato</Link>
+                {/*<Link>Contato</Link>*/}
               </li>
             </ul>
           </div>
@@ -87,10 +91,10 @@ export default function Footer() {
   );
 }
 
-function Link({ children }) {
-  return (
-    <span className="no-underline hover:underline text-gray-800 hover:text-blue-900 cursor-pointer">
-      {children}
-    </span>
-  );
-}
+// function Link({ children }) {
+//   return (
+//     <span className="no-underline hover:underline text-gray-800 hover:text-blue-900 cursor-pointer">
+//       {children}
+//     </span>
+//   );
+// }

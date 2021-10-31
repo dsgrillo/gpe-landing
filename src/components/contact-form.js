@@ -7,10 +7,7 @@ export default function ContactForm() {
   const [success, setSuccess] = useState(false);
 
   return (
-    <section
-      className="container mx-auto text-center py-6 mb-12"
-      id={"contato"}
-    >
+    <section className="container mx-auto text-center py-6 mb-12">
       <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
         O que você está esperando para fazer pesquisa fácil assim?
       </h1>

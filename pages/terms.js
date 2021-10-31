@@ -10,12 +10,11 @@ export default function Terms() {
             <strong>TERMOS E CONDIÇÕES GERAIS DE USO</strong>
           </h3>
           <p>
-            <strong>MG5 INOVAÇÃO E TECNOLOGIA LTDA</strong>, pessoa jurídica de
-            direito privado, inscrita no CNPJ sob n. 32,597,302/0001-85, com
-            sede na Rua 17, no. 562 – Consolação, CEP 13503-280, Rio Claro – São
-            Paulo– Brasil, desenvolvedora da plataforma <strong>MAGIS5</strong>,
-            denominado <strong>&quot;LICENCIANTE&quot;</strong> por meio deste
-            Contrato de Acordo para Licença de Usuário Final ou{" "}
+            <strong>*</strong>, pessoa jurídica de direito privado, inscrita no
+            CNPJ sob n. *, com sede na *, desenvolvedora da plataforma{" "}
+            <strong>GPE Pesquisa</strong>, denominado{" "}
+            <strong>&quot;LICENCIANTE&quot;</strong> por meio deste Contrato de
+            Acordo para Licença de Usuário Final ou{" "}
             <strong>TERMOS E CONDIÇÕES GERAIS DE USO</strong> entre o licenciado
             (pessoa física ou jurídica) denominado apenas como
             <strong>&quot;LICENCIADO&quot;</strong>.
@@ -36,9 +35,11 @@ export default function Terms() {
               <u>acordo com a proposta comercial apresentada</u>
             </strong>
             , o direito de uso do programa do sistema de gerenciamento
-            denominado <strong>MAGIS5</strong>, por meio do site{" "}
-            <a href="http://www.magis5.com.br/">http://www.magis5.com.br</a>,
-            para o LICENCIADO, podendo compreender ainda os meios físicos
+            denominado <strong>GPE Pesquisa</strong>, por meio do site{" "}
+            <a href="https://www.gpepesquisa.com.br/">
+              https://www.gpepesquisa.com.br
+            </a>
+            , para o LICENCIADO, podendo compreender ainda os meios físicos
             associados, bem como quaisquer materiais impressos e qualquer
             documentação online ou eletrônica. Ao utilizar o SOFTWARE, mesmo que
             parcialmente ou a título de teste, o LICENCIADO estará vinculado aos
@@ -181,9 +182,8 @@ export default function Terms() {
           <p>
             A LICENCIANTE empreenderá esforços comercialmente razoáveis para
             tornar o SOFTWARE disponível, entretanto poderá haver instabilidades
-            em razão das suas conexões externas, como o acesso aos ERPs,
-            marketplaces ou plataforma de e-commerce, neste caso o LICENCIANTE
-            não responderá por esta falha.
+            em razão das suas conexões externas, neste caso o LICENCIANTE não
+            responderá por esta falha.
           </p>
           <h4>11. Isenção de Responsabilidade da Licenciante</h4>
           <p>A LICENCIANTE não se responsabiliza:</p>

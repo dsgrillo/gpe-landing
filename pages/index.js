@@ -2,16 +2,24 @@ import Head from "next/head";
 import NavHeader from "../src/components/nav-header";
 import Hero from "../src/components/hero";
 import appHome from "../public/app_home.png";
+import questionariosSemComplicacoes from "../public/crie-questionarios-sem-complicacoes.jpg";
+import relatoriosTabelas from "../public/relatorios-tabelas.svg";
 import ContactForm from "../src/components/contact-form";
 import Footer from "../src/components/footer";
 import Image from "next/image";
 import Waves from "../src/components/waves";
+import analysis from "../public/home/analysis.png";
+import computer from "../public/home/computer.png";
+import exam from "../public/home/exam.png";
+import map from "../public/home/map.png";
+import survey from "../public/home/survey.png";
+import Link from "next/link";
 
 function Feature({ img, title, text, position }) {
   return (
-    <div className="flex flex-wrap flex-col-reverse sm:flex-row">
+    <div className="flex flex-wrap flex-col-reverse sm:flex-row ">
       {position === "left" && (
-        <div className="w-full sm:w-1/2 p-6 mt-6">
+        <div className="w-full sm:w-1/2 p-6 mt-6 items-center flex">
           {img && <Image src={img} alt={text} />}
         </div>
       )}
@@ -23,6 +31,43 @@ function Feature({ img, title, text, position }) {
           <p className="text-gray-600 mb-8">{text}</p>
         </div>
       </div>
+      {position === "right" && (
+        <div className="w-full sm:w-1/2 p-6 mt-6 items-center flex">
+          {img && <Image src={img} alt={text} />}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function Box({ title, body, img }) {
+  return (
+    <div className="w-full md:w-1/4 p-6 flex flex-col flex-grow flex-shrink">
+      <div className="max-w-sm rounded overflow-hidden shadow hover:bg-gray-100">
+        <div className="px-6 py-4 text-center font-bold text-xl mb-2 text-gray-800 hover:scale-105 duration-300">
+          {title}
+        </div>
+
+        <Image className="w-full" src={img} alt="Mountain" />
+        <div className="px-6 py-4">
+          <p className="text-gray-700 text-base">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Voluptatibus quia, nulla! Maiores et perferendis eaque,
+            exercitationem praesentium nihil.
+          </p>
+        </div>
+        {/*<div className="px-6 pt-4 pb-2">*/}
+        {/*  <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">*/}
+        {/*    #photography*/}
+        {/*  </span>*/}
+        {/*  <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">*/}
+        {/*    #travel*/}
+        {/*  </span>*/}
+        {/*  <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">*/}
+        {/*    #winter*/}
+        {/*  </span>*/}
+        {/*</div>*/}
+      </div>
     </div>
   );
 }
@@ -32,6 +77,7 @@ export default function Home() {
     <>
       <Hero />
 
+      <div id={"como-funciona"} className={"bg-white pb-3"}></div>
       <section className="bg-white border-b py-8">
         <div className="container max-w-5xl mx-auto m-8">
           <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
@@ -43,6 +89,7 @@ export default function Home() {
           <Feature
             position={"right"}
             title={"Crie questionários sem complicações"}
+            img={questionariosSemComplicacoes}
             text={
               <>
                 <br />
@@ -104,6 +151,7 @@ export default function Home() {
           <Feature
             position={"right"}
             title={"Relatórios, tabelas e gráficos em poucos cliques"}
+            img={relatoriosTabelas}
             text={
               <>
                 <br />
@@ -135,6 +183,7 @@ export default function Home() {
           <Feature
             position={"left"}
             title={"Melhore o trabalho em campo"}
+            img={questionariosSemComplicacoes}
             text={
               <>
                 <br />
@@ -165,7 +214,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="bg-white border-b py-8">
+      <section className="bg-white border-b pt-8">
         <div className="container mx-auto flex flex-wrap pt-4 pb-12">
           <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
             Fazer pesquisa nunca foi tão fácil
@@ -173,78 +222,78 @@ export default function Home() {
           <div className="w-full mb-4">
             <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
           </div>
-          <div className="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-            <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-              <span className="flex flex-wrap no-underline hover:no-underline">
-                <p className="w-full text-gray-600 text-xs md:text-sm px-6">
-                  GETTING STARTED
-                </p>
-                <div className="w-full font-bold text-xl text-gray-800 px-6">
-                  Perfeito para análise e criação
-                </div>
-                <p className="text-gray-800 text-base px-6 mb-5">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
-                </p>
-              </span>
-            </div>
-            <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-              <div className="flex items-center justify-start">
-                <button className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                  Action
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-            <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-              <span className="flex flex-wrap no-underline hover:no-underline">
-                <p className="w-full text-gray-600 text-xs md:text-sm px-6">
-                  xGETTING STARTED
-                </p>
-                <div className="w-full font-bold text-xl text-gray-800 px-6">
-                  Lorem ipsum dolor sit amet.
-                </div>
-                <p className="text-gray-800 text-base px-6 mb-5">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
-                </p>
-              </span>
-            </div>
-            <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-              <div className="flex items-center justify-center">
-                <button className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                  Action
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-            <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-              <span className="flex flex-wrap no-underline hover:no-underline">
-                <p className="w-full text-gray-600 text-xs md:text-sm px-6">
-                  xGETTING STARTED
-                </p>
-                <div className="w-full font-bold text-xl text-gray-800 px-6">
-                  Lorem ipsum dolor sit amet.
-                </div>
-                <p className="text-gray-800 text-base px-6 mb-5">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
-                </p>
-              </span>
-            </div>
-            <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-              <div className="flex items-center justify-end">
-                <button className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                  Action
-                </button>
-              </div>
-            </div>
-          </div>
+          {/*<Box*/}
+          {/*  title={"Crie seu questionário"}*/}
+          {/*  img={questionariosSemComplicacoes}*/}
+          {/*/>*/}
+          {/*<Box*/}
+          {/*  title={"Colete entrevistas"}*/}
+          {/*  img={questionariosSemComplicacoes}*/}
+          {/*/>*/}
+
+          {/*<Box title={"Monitore o campo"} img={questionariosSemComplicacoes} />*/}
+
+          {/*<Box*/}
+          {/*  title={"Gere os relatórios"}*/}
+          {/*  img={questionariosSemComplicacoes}*/}
+          {/*/>*/}
+          {/*<div className="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">*/}
+          {/*  <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">*/}
+          {/*    <span className="flex flex-wrap no-underline hover:no-underline">*/}
+          {/*      <p className="w-full text-gray-600 text-xs md:text-sm px-6">*/}
+          {/*        xGETTING STARTED*/}
+          {/*      </p>*/}
+          {/*      <div className="w-full font-bold text-xl text-gray-800 px-6">*/}
+          {/*        Lorem ipsum dolor sit amet.*/}
+          {/*      </div>*/}
+          {/*      <p className="text-gray-800 text-base px-6 mb-5">*/}
+          {/*        Lorem ipsum dolor sit amet, consectetur adipiscing elit.*/}
+          {/*        Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.*/}
+          {/*      </p>*/}
+          {/*    </span>*/}
+          {/*  </div>*/}
+          {/*  <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">*/}
+          {/*    <div className="flex items-center justify-center">*/}
+          {/*      <button className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">*/}
+          {/*        Action*/}
+          {/*      </button>*/}
+          {/*    </div>*/}
+          {/*  </div>*/}
+          {/*</div>*/}
+          {/*<div className="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">*/}
+          {/*  <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">*/}
+          {/*    <span className="flex flex-wrap no-underline hover:no-underline">*/}
+          {/*      <p className="w-full text-gray-600 text-xs md:text-sm px-6">*/}
+          {/*        xGETTING STARTED*/}
+          {/*      </p>*/}
+          {/*      <div className="w-full font-bold text-xl text-gray-800 px-6">*/}
+          {/*        Lorem ipsum dolor sit amet.*/}
+          {/*      </div>*/}
+          {/*      <p className="text-gray-800 text-base px-6 mb-5">*/}
+          {/*        Lorem ipsum dolor sit amet, consectetur adipiscing elit.*/}
+          {/*        Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.*/}
+          {/*      </p>*/}
+          {/*    </span>*/}
+          {/*  </div>*/}
+          {/*  <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">*/}
+          {/*    <div className="flex items-center justify-end">*/}
+          {/*      <button className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">*/}
+          {/*        Action*/}
+          {/*      </button>*/}
+          {/*    </div>*/}
+          {/*  </div>*/}
+          {/*</div>*/}
+        </div>
+        <div className="relative" style={{ paddingTop: "56.25%" }}>
+          <iframe
+            className="absolute inset-0 w-full h-full"
+            src="https://www.youtube-nocookie.com/embed/GL7LQUUBEkU"
+            frameBorder="0"
+          ></iframe>
         </div>
       </section>
-      <section className="bg-gray-100 py-8" id={"preco"}>
+      <div id={"preco"} className={"bg-gray-100 pb-3"}></div>
+      <section className="bg-gray-100 py-8">
         <div className="container mx-auto px-2 pt-4 pb-12 text-gray-800">
           <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
             Preço
@@ -284,9 +333,11 @@ export default function Home() {
                   </span>
                 </div>
                 <div className="flex items-center justify-center">
-                  <button className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                    Assinar plano
-                  </button>
+                  <Link href={"/#contato"}>
+                    <a className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                      Assinar plano
+                    </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -295,7 +346,7 @@ export default function Home() {
       </section>
       {/*!-- Change the colour #f8fafc to match the previous section colour -->*/}
       <svg
-        className="wave-top"
+        className="wave-top -mb-8"
         viewBox="0 0 1439 147"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
@@ -324,6 +375,7 @@ export default function Home() {
           </g>
         </g>
       </svg>
+      <div id={"contato"} className={"mb-9"}></div>
       <ContactForm />
     </>
   );
