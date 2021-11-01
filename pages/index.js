@@ -1,18 +1,9 @@
-import Head from "next/head";
-import NavHeader from "../src/components/nav-header";
 import Hero from "../src/components/hero";
 import appHome from "../public/app_home.png";
 import questionariosSemComplicacoes from "../public/crie-questionarios-sem-complicacoes.jpg";
 import relatoriosTabelas from "../public/relatorios-tabelas.svg";
 import ContactForm from "../src/components/contact-form";
-import Footer from "../src/components/footer";
 import Image from "next/image";
-import Waves from "../src/components/waves";
-import analysis from "../public/home/analysis.png";
-import computer from "../public/home/computer.png";
-import exam from "../public/home/exam.png";
-import map from "../public/home/map.png";
-import survey from "../public/home/survey.png";
 import Link from "next/link";
 
 function Feature({ img, title, text, position }) {
@@ -312,9 +303,11 @@ export default function Home() {
                   <li className="border-b py-4">
                     Acesso a todas as funcionalidades
                   </li>
-                  <li className="border-b py-4">Preço flexível</li>
-                  <li className="border-b py-4">Thing</li>
-                  <li className="border-b py-4">Thing</li>
+                  <li className="border-b py-4">Dispositivos Ilimitados</li>
+                  <li className="border-b py-4">Questionários Ilimitados</li>
+                  <li className="border-b py-4">
+                    Pague apenas por entrevista feita
+                  </li>
                 </ul>
               </div>
               <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
