@@ -8,6 +8,18 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
+        <title>GPE Pesquisa | Plataforma online de gestão de Pesquisa</title>
+        <meta
+          property="og:title"
+          content="GPE Pesquisa | Plataforma online de gestão de Pesquisa"
+        />
+        <meta
+          name={"description"}
+          content={
+            "Como criamos o nosso próprio sistema para solucionar os desafios que o mercado de pesquisas possui."
+          }
+        />
+		<meta name="facebook-domain-verification" content="9e76723u54bw4tuj1cj1pwndnma2wc" />
         <link
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700"
           rel="stylesheet"
