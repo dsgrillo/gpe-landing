@@ -61,7 +61,11 @@ export default function Footer() {
             <p className="uppercase text-gray-500 md:mb-6">Social</p>
             <ul className="list-reset mb-6">
               <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                {/*<Link>Facebook</Link>*/}
+                <Link href={"https://www.instagram.com/gpepesquisa/"}>
+                  <a className="no-underline hover:underline text-gray-800 hover:text-blue-600">
+                    Instagram
+                  </a>
+                  </Link>
               </li>
               <li className="mt-2 inline-block mr-2 md:block md:mr-0">
                 {/*<Link>Linkedin</Link>*/}

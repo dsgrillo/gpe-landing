@@ -70,13 +70,34 @@ export default function Home() {
 
       <div id={"como-funciona"} className={"bg-white pb-3"}></div>
       <section className="bg-white border-b py-8">
-        <div className="container max-w-5xl mx-auto m-8">
+        <div className="container max-w-5xl mx-auto">
+
+          <div className={"flex mb-8"}>
+            {
+              [{
+                title: 'O que é?',
+                body: 'Plataforma de gestão online de questionários e aplicativo mobile para coleta de entrevistas.'
+              },
+                {
+                  title: 'Para quem é?',
+                  body: 'Destinado a empresas e institutos de pesquisa, consultores políticos, pesquisadores freelances e outros que trabalham com bases de dados.'
+                }].map(({title, body}) => (
+                <div className={"text-gray-800 shadow p-3 m-2 flex-1 bg-gray-50 rounded"}>
+                  <h2 className={"text-2xl mb-3"}> {title} </h2>
+                  <p className={""}> {body}</p>
+                </div>
+              ))
+            }
+          </div>
+
           <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
             Como funciona?
           </h1>
           <div className="w-full mb-4">
             <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
           </div>
+
+
           <Feature
             position={"right"}
             title={"Crie questionários sem complicações"}
@@ -296,7 +317,7 @@ export default function Home() {
             <div className="flex flex-col w-5/6 lg:w-1/3 mx-auto lg:mx-0 rounded-lg bg-white mt-4 sm:-mt-6 shadow-lg z-10">
               <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
                 <div className="w-full p-8 text-3xl font-bold text-center">
-                  Plano Básico
+                  Plano Básico Mensal
                 </div>
                 <div className="h-1 w-full gradient my-0 py-0 rounded-t"></div>
                 <ul className="w-full text-center text-base font-bold">
@@ -313,7 +334,7 @@ export default function Home() {
               <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
                 <div className="w-full pt-6 text-4xl font-bold text-center">
                   R$ 99,00
-                  <span className="text-base text-gray-500"> / mês</span>
+                  {/*<span className="text-base text-gray-500"> / mês</span>*/}
                 </div>
                 <div className="w-full text-blue-800 text-4xl font-bold text-center">
                   +
@@ -337,6 +358,87 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section className={"bg-white py-8"}>
+        <div className="container mx-auto px-2 pt-4 pb-12 text-gray-800">
+          <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+            Perguntas frequentes
+          </h1>
+          <div className="w-full mb-4">
+            <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+          </div>
+
+
+
+          <dl className="mt-8 mx-auto max-w-screen-sm lg:max-w-screen-lg flex flex-col lg:flex-row lg:flex-wrap">
+            {
+              [
+                {
+                  question: "Preciso de internet para coletar entrevistas?",
+                  answer: "Não, o aplicativo funciona de forma offline. Portanto é possível coletar as entrevistas mesmo sem conexão à internet."
+                },
+                {
+                  question: "Como faço para criar uma conta?",
+                  answer: "Entre em contato com a gente. Em seguida criaremos uma conta para você e te daremos as credenciais de acesso. "
+                },
+                {
+                  question: "Existe algum limite de questionários ou dispositivos?",
+                  answer: "Não. Você pode criar questionários complexos e longos se necessario sem pagar nenhum adicional. " +
+                    "Além disso, você pode usar quantos celulares quiser."
+                },
+                {
+                  question: "Como funciona o período trial?",
+                  answer: "Durante o trial você pode experimentar todas as funcionalidades, criar questionários, coletar entrevistas e até gerar relatórios completos sem " +
+                    "pagar nada. Temos certeza que depois de provar, vai ser difícil não se apaixonar!"
+                  // answer: <p>Experimente nosso sistema por 30 dias gratuitamente.<br />
+                  //   No final desse período, você deve decidir se quer continuar usufruindo do nosso sistema ou não.<br />
+                  //   Caso queira continuar, pague por entrevista coletada (R$ 0,144 a unidade) + mensalidade de R$ 99,00.<br />
+                  //   Caso não queira continuar, não precisa pagar nada e sua conta será desativada automáticamente.</p>
+                }].map(({question, answer}) => (
+                <div key={question} className="lg:w-1/2 my-3">
+                  <div
+                    className="select-none border-2 mx-3 px-6 py-4 rounded-lg text-sm group h-full bg-gray-50 shadow">
+                    <dt className="question">
+                      <div className="flex justify-between">
+                        <div className="text-gray-800 font-semibold">
+                          {question}
+                        </div>
+                        <div>
+                          {/*<svg fill="currentColor"*/}
+                          {/*     className="question-chevron group-hover:bg-gray-500 h-5 block text-indigo-800 bg-gray-400 rounded-full p-1 hidden"*/}
+                          {/*     viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"*/}
+                          {/*>*/}
+                          {/*  <g stroke="currentColor" strokeWidth="1" fill="currentColor" fillRule="evenodd">*/}
+                          {/*    <g>*/}
+                          {/*      <polygon*/}
+                          {/*        points="9.29289322 12.9497475 10 13.6568542 15.6568542 8 14.2426407 6.58578644 10 10.8284271 5.75735931 6.58578644 4.34314575 8"></polygon>*/}
+                          {/*    </g>*/}
+                          {/*  </g>*/}
+                          {/*</svg>*/}
+                          {/*<svg fill="currentColor"*/}
+                          {/*     className="question-chevron group-hover:bg-gray-500 h-5 block text-indigo-800 bg-gray-400 rounded-full p-1"*/}
+                          {/*     viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg">*/}
+                          {/*  <g stroke="currentColor" strokeWidth="1" fill="currentColor" fillRule="evenodd">*/}
+                          {/*    <g>*/}
+                          {/*      <polygon*/}
+                          {/*        points="10.7071068 7.05025253 10 6.34314575 4.34314575 12 5.75735931 13.4142136 10 9.17157288 14.2426407 13.4142136 15.6568542 12"></polygon>*/}
+                          {/*    </g>*/}
+                          {/*  </g>*/}
+                          {/*</svg>*/}
+                        </div>
+                      </div>
+                    </dt>
+                    <dd className="answer mt-2 leading-snug text-gray-700">
+                      {answer}
+                    </dd>
+                  </div>
+                </div>
+              ))
+            }
+
+          </dl>
+        </div>
+      </section>
       {/*!-- Change the colour #f8fafc to match the previous section colour -->*/}
       <svg
         className="wave-top -mb-8"
@@ -346,7 +448,7 @@ export default function Home() {
       >
         <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
           <g transform="translate(-1.000000, -14.000000)" fillRule="nonzero">
-            <g className="wave" fill="#f3f4f6">
+            <g className="wave" fill="#FFF">
               <path d="M1440,84 C1383.555,64.3 1342.555,51.3 1317,45 C1259.5,30.824 1206.707,25.526 1169,22 C1129.711,18.326 1044.426,18.475 980,22 C954.25,23.409 922.25,26.742 884,32 C845.122,37.787 818.455,42.121 804,45 C776.833,50.41 728.136,61.77 713,65 C660.023,76.309 621.544,87.729 584,94 C517.525,105.104 484.525,106.438 429,108 C379.49,106.484 342.823,104.484 319,102 C278.571,97.783 231.737,88.736 205,84 C154.629,75.076 86.296,57.743 0,32 L0,0 L1440,0 L1440,84 Z"></path>
             </g>
             <g transform="translate(1.000000, 15.000000)" fill="#FFFFFF">
