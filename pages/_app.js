@@ -19,11 +19,19 @@ function MyApp({ Component, pageProps }) {
             "Como criamos o nosso próprio sistema para solucionar os desafios que o mercado de pesquisas possui."
           }
         />
-		<meta name="facebook-domain-verification" content="9e76723u54bw4tuj1cj1pwndnma2wc" />
+        <meta
+          name="facebook-domain-verification"
+          content="9e76723u54bw4tuj1cj1pwndnma2wc"
+        />
         <link
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700"
           rel="stylesheet"
         />
+        <link
+          rel="stylesheet"
+          href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+        />
+
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-7W7YVP1YNE"
@@ -40,10 +48,12 @@ function MyApp({ Component, pageProps }) {
         ></script>
       </Head>
       <NavHeader />
-      <div className={"pt-24"}>
-        <Component {...pageProps} />
+      <div className={"min-h-screen flex flex-col"}>
+        <div className={"pt-20"}>
+          <Component {...pageProps} />
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 }

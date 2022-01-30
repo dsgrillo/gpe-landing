@@ -319,7 +319,7 @@ export default function Home() {
                   +
                 </div>
                 <div className="w-full text-4xl font-bold text-center">
-                  R$ 0,144
+                  R$ 0,15
                   <span className="text-base text-gray-500">
                     {" "}
                     / por entrevista

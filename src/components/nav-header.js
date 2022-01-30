@@ -175,6 +175,16 @@ export default function NavHeader() {
         >
           <ul className="list-reset lg:flex justify-end flex-1 items-center">
             <li className="mr-3">
+              <Link href={"/docs/01-introduction"}>
+                <a
+                  href={"/docs/01-introduction"}
+                  className="inline-block py-2 px-4 font-bold no-underline"
+                >
+                  Comece em poucos minutos
+                </a>
+              </Link>
+            </li>
+            <li className="mr-3">
               <Link href={"/#como-funciona"}>
                 <a
                   href={"#como-funciona"}
