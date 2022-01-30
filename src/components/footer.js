@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="bg-white">
       <div className="container mx-auto px-8">
         <div className="w-full flex flex-col md:flex-row py-6">
-          <div className="flex-1 mb-6 text-black">
+          <div className="flex-1 mb-6 text-gray-800">
             <span className="text-black-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl">
               {/*!--Icon from: http://www.potlabicons.com/ -->*/}
               {/*<svg className="h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg"*/}

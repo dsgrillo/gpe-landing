@@ -18,8 +18,8 @@ export default function Post({ post, morePosts, preview }) {
         <>Loading…</>
       ) : (
         <>
-          <article className="mb-32">
-            <div className="container mx-auto bg-white text-black rounded-xl p-8">
+          <article className="my-16">
+            <div className="container mx-auto bg-white text-gray-800 rounded-xl p-8">
               <div className={"markdown-body"}>
                 <ReactMarkdown rehypePlugins={[rehypeRaw]}>
                   {post.content}

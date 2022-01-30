@@ -47,12 +47,14 @@ function MyApp({ Component, pageProps }) {
           }}
         ></script>
       </Head>
-      <NavHeader />
-      <div className={"min-h-screen flex flex-col"}>
-        <div className={"pt-20"}>
-          <Component {...pageProps} />
+      <div>
+        <NavHeader />
+        <div className={"relative"}>
+          <div className={"min-h-screen flex flex-col"}>
+            <Component {...pageProps} />
+          </div>
+          <Footer />
         </div>
-        <Footer />
       </div>
     </>
   );
